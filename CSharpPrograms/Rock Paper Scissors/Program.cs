@@ -6,8 +6,10 @@ namespace Rock_Paper_Scissors
     {
         private static void Main(string[] args)
         {
+            int[] score = new int[2];
             bool playAgainLoop = true;
             while (playAgainLoop == true)
+            
             {
                 Console.WriteLine("Let's play Rock, Paper, Scissors. Enter your move.");
                 string inputMove = Console.ReadLine().ToLower();
