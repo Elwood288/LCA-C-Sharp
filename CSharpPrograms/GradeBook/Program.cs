@@ -27,6 +27,11 @@ namespace GradeBook
                 GradeBookDictionary.Add(choice, grades);
                 Console.Clear();
             }
+
+
+
+            
+
             Console.Clear();
             //print out all student names and their grades
             foreach (var choice in GradeBookDictionary.Keys)
@@ -40,7 +45,6 @@ namespace GradeBook
                 //find low grade
                 int lowGrade = gradeInts.Min();
                 //find average grade
-                //double d = Convert.ToDouble(gradeInts);
                 double averageGrade = gradeInts.Average();
                 //Write out students information
                 Console.WriteLine("Student: " + choice);
