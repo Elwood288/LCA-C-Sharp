@@ -16,6 +16,8 @@ namespace Towers
         private static string compareString = " ";
         private static int compareInt = -1;
         private static bool winner = false;
+        private static string playerSelect = " ";
+        private static bool validChoice = false;
 
         private static void Main(string[] args)
         {
@@ -46,33 +48,67 @@ namespace Towers
                 }
 
                 // Player selects a row to move a number from
-                Console.WriteLine(" ");
-                Console.WriteLine("_______________________________");
-                Console.WriteLine("Select a row. A, B, or C");
-                string playerSelect = Console.ReadLine().ToLower();
-                Console.WriteLine(" ");
-
-                // Pop the top value off the stack the player selected
-                if (playerSelect == "a")
+               
+                    Console.WriteLine(" ");
+                    Console.WriteLine("_______________________________");
+                    Console.WriteLine("Select a row. A, B, or C");
+                while (validChoice == false)
                 {
-                    move = A.Pop();
-                }
+                    playerSelect = Console.ReadLine().ToLower();
+                    Console.WriteLine(" ");
 
-                if (playerSelect == "b")
-                {
-                    move = B.Pop();
-                }
+                    // Pop the top value off the stack the player selected
+                    if (playerSelect == "a")
+                    {
+                        if (A.Count > 0)
+                        {
+                            move = A.Pop();
+                            validChoice = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid move.");
+                            Console.Read();
 
-                if (playerSelect == "c")
-                {
-                    move = C.Pop();
+                        }
+                    }
+
+                    if (playerSelect == "b")
+                    {
+                        if (B.Count > 0)
+                        {
+                            move = B.Pop();
+                            validChoice = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid move.");
+                            
+
+                        }
+                    }
+
+                    if (playerSelect == "c")
+                    {
+                        if (C.Count > 0)
+                        {
+                            move = C.Pop();
+                            validChoice = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid move.");
+                            Console.Read();
+
+                        }
+                    }
                 }
 
                 // Convert the popped value to a integer for comparison later
                 moveString = move.ToString();
                 moveInt = Int32.Parse(moveString);
                 // Player selects a row to move a number to
-                Console.WriteLine("Stored value: " + moveString);
+                Console.WriteLine("\nStored value: " + moveString);
                 Console.WriteLine("Select a row to place the number.");
                 string playerDestination = Console.ReadLine().ToLower();
 
@@ -151,7 +187,7 @@ namespace Towers
                         }
                     }
                 }
-                // When all 4 values have been moved to stack C break out of the loop
+                // When all 4 values have been moved to Stack
                 if (C.Count == 4)
                 {
                     winner = true;

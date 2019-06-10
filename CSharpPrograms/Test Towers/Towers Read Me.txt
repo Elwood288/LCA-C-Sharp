@@ -1,0 +1,8 @@
+Code Plan
+
+1.Print the board
+2.Have the player choose a row
+3.Have the player choose a row to move that value
+4.Transfer the value
+5.Code win condition
+6.Block invalid moves
