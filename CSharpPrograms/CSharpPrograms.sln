@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sub Classes", "Sub Classes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towers", "Towers\Towers.csproj", "{E4191CEA-0EED-4895-A26A-5CAB4DD13D0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroes", "SuperHeroes\SuperHeroes.csproj", "{550EB140-9913-4500-BDA7-E0B12A0E20B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{E4191CEA-0EED-4895-A26A-5CAB4DD13D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4191CEA-0EED-4895-A26A-5CAB4DD13D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4191CEA-0EED-4895-A26A-5CAB4DD13D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
