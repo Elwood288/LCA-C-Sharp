@@ -68,7 +68,7 @@ namespace Towers
                         else
                         {
                             Console.WriteLine("Invalid move.");
-                            Console.Read();
+                            
 
                         }
                     }
@@ -98,7 +98,7 @@ namespace Towers
                         else
                         {
                             Console.WriteLine("Invalid move.");
-                            Console.Read();
+                            
 
                         }
                     }
