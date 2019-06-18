@@ -60,7 +60,7 @@ namespace SuperHeroes
             public string Superpower { get; set; }
 
 
-            public SuperHero(string realName, string superpower, string personName, string nickname) : base(personName, nickname)
+            public SuperHero(string realName, string superpower, string personName, string nickname) : base(personName, nickname /*<= Put null here*/)
             {
                 RealName = realName;
                 Superpower = superpower;

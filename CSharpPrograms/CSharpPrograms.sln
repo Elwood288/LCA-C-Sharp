@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Towers", "Towers\Towers.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperHeroes", "SuperHeroes\SuperHeroes.csproj", "{550EB140-9913-4500-BDA7-E0B12A0E20B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory", "Inventory\Inventory.csproj", "{DE5ACF86-4ECC-405E-B465-AF97C48B857B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550EB140-9913-4500-BDA7-E0B12A0E20B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE5ACF86-4ECC-405E-B465-AF97C48B857B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE5ACF86-4ECC-405E-B465-AF97C48B857B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE5ACF86-4ECC-405E-B465-AF97C48B857B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE5ACF86-4ECC-405E-B465-AF97C48B857B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
