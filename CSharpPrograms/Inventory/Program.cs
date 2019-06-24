@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Inventory
 {
     internal class Program
     {
-        static List<IRentable> Inventory = new List<IRentable>();
-        static void Main(string[] args)
+        private static List<IRentable> Inventory = new List<IRentable>();
+
+        private static void Main(string[] args)
         {
             Car blueCar = new Car("Blue Car");
             Inventory.Add(blueCar);
@@ -25,7 +23,6 @@ namespace Inventory
                 Console.WriteLine("Description: " + item.GetDescription());
                 Console.WriteLine("Rate: $" + item.GetDailyRate());
                 Console.WriteLine("____________________________");
-
             }
             Console.Read();
         }
@@ -60,6 +57,7 @@ namespace Inventory
             {
                 return Description;
             }
+
             public string WhatType()
             {
                 return Type;
@@ -86,6 +84,7 @@ namespace Inventory
             {
                 return Description;
             }
+
             public string WhatType()
             {
                 return Type;
@@ -112,6 +111,7 @@ namespace Inventory
             {
                 return Description;
             }
+
             public string WhatType()
             {
                 return Type;
