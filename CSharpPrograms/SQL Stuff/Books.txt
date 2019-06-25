@@ -1,0 +1,23 @@
+1. Creat table with 3 columns
+CREATE TABLE books (id int, title varchar(20), author varchar(20));
+   
+2.Insert books into the table   
+   INSERT INTO books (id, title, author) VALUES
+   (1, 'The Hobbit', 'Tolkien');
+   INSERT INTO books (id, title, author) VALUES
+   (2, 'The Cat in the Hat', 'Dr.Suess');
+   
+3. Issue a query to select the books in your database   
+   SELECT * FROM books;
+   
+4. Issue a query to select a book by a specific id from your database  
+   select * from books where id=2;
+   
+5. Issue a query to select the titles of all the books from you database
+   SELECT title from books;
+   
+6. Issue a query to update a single book in your database.
+   update books set title = 'Green Eggs and Ham' where id=2;
+   
+7. Issue a query to delete a single book from you database.
+   delete from books where id = 1;
