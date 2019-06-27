@@ -7,7 +7,7 @@
     <ProjectGuid>{68E6EA70-A074-4592-A5AD-47EC2EAF36B3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>SQL_Stuff</RootNamespace>
-    <AssemblyName>SQL_Stuff</AssemblyName>
+    <AssemblyName>SQL Stuff</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Books.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

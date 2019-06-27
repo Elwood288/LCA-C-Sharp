@@ -10,6 +10,7 @@ namespace SQL_Stuff
     {
         static void Main(string[] args)
         {
+            //Filler Project for submitting SQL assignments
         }
     }
 }
