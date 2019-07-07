@@ -7,8 +7,7 @@ namespace To_Do_List
     internal class ItemRepository
     {
         private ToDoContext context = new ToDoContext();
-        private ConsoleUtils conu = new ConsoleUtils();
-
+        
         public ItemRepository()
         {
             context = new ToDoContext();
@@ -26,8 +25,8 @@ namespace To_Do_List
         //List all pending items
         public List<ToDoItem> GetPendingItems()
         {
-            IEnumerable<ToDoItem> list = context.ToDoItems.Where(item => item.Status == false);
-            return list.ToList();
+            IEnumerable<ToDoItem> pendingList = context.ToDoItems.Where(x => x.Status == false);
+            return pendingList.ToList();
         }
 
         //List all done items
@@ -63,30 +62,7 @@ namespace To_Do_List
             context.SaveChanges();
         }
 
-        //change status
-
-        public void ChangeStatus(int id)
-        {
-            ToDoItem oldItem = context.ToDoItems.Where(item => item.Id == id).FirstOrDefault();
-            string choice = Console.ReadLine();
-
-            if (choice == "1")
-            {
-                oldItem.Status = false;
-            }
-            if (choice == "2")
-            {
-                oldItem.Status = true;
-            }
-            else
-            {
-                conu.ErrorMessage();
-                //newStatus = oldItem.Status;
-            }
-            //oldItem.Status = newStatus;
-            context.Update(oldItem);
-            context.SaveChanges();
-        }
+    
 
         //check if an Id exists in the database
         public bool CheckValidId(int itemId)
@@ -100,5 +76,31 @@ namespace To_Do_List
                 return true;
             }
         }
+
+        //Prints the full list
+        public void PrintFullList()
+        {
+            Console.Clear();
+            Console.WriteLine("To Do List: ");
+
+            ItemRepository list = new ItemRepository();
+            list.GetToDoItems();
+            foreach (ToDoItem s in list.GetToDoItems())
+            {
+                string textStatus = "Pending";
+                if (s.Status == false)
+                {
+                    textStatus = "Pending";
+                }
+                if (s.Status == true)
+                {
+                    textStatus = "Done";
+                }
+                Console.WriteLine("{0} - {1}   Status:" + textStatus,
+                     s.Id, s.Description, s.Status);
+            }
+        }
     }
+
+
 }

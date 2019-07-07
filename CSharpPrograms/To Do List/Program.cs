@@ -5,6 +5,7 @@ namespace To_Do_List
     internal class Program
     {
         private ToDoContext context = new ToDoContext();
+        private static App app = new App();
         public static string choice = " ";
 
         private static void Main(string[] args)
@@ -18,27 +19,42 @@ namespace To_Do_List
                 //View list
                 if (choice == "1")
                 {
-                    conu.WhatList();
+                    string choice = conu.WhatList();
+                    if (choice == "1")
+                    {
+                        app.PrintFullList();
+                    }
+                    if (choice == "2")
+                    {
+                        app.PrintPendingList();
+                    }
+                    if (choice == "3")
+                    {
+                        app.PrintDoneList();
+                    }
+                    else
+                    {
+                        conu.ErrorMessage();
+                    }
                     Console.Read();
                 }
                 //Add item
                 if (choice == "2")
                 {
-                    conu.NewItem();
-                    Console.Read();
+                    app.NewItemApp();
                 }
                 //Edit item
                 if (choice == "3")
                 {
-                    conu.PrintFullList();
-                    conu.UpdateItem();
+                    app.PrintFullList();
+                    app.UpdateMenu();
                     Console.Read();
                 }
                 //Delete item
                 if (choice == "4")
                 {
-                    conu.PrintFullList();
-                    conu.DeleteItem();
+                    app.PrintFullList();
+                    app.DeleteItem();
                     Console.Read();
                 }
             }
